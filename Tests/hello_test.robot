@@ -5,5 +5,5 @@ Library    Process
 *** Test Cases ***
 Test Hello World Output
       [Documentation]                          Run the C++ Hello World program and verify output.
-      ${result} =        Run Process          ./CppRobo
+      ${result} =        Run Process          ./hello_test
       Should Contain     ${result.stdout}      Hello, World!
