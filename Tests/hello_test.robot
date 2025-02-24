@@ -1,5 +1,6 @@
 *** Settings ***
 Library    Process
+Library    OperatingSystem
 
 *** Test Cases ***
 Test Hello World Output
