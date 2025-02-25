@@ -1,26 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2 (Python 3.13.2 on darwin)" generated="2025-02-24T12:22:41.227392" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2 (Python 3.13.2 on darwin)" generated="2025-02-25T10:14:13.542798" rpa="false" schemaversion="5">
 <suite id="s1" name="Hello Test" source="/Users/babarcha/PyCharm/PyRoboCppTest/Tests/hello_test.robot">
-<test id="s1-t1" name="Test Hello World Output" line="19">
+<test id="s1-t1" name="Test Hello World Output" line="8">
+<kw name="Get Environment Variable" owner="OperatingSystem">
+<msg time="2025-02-25T10:14:13.602208" level="FAIL">Environment variable 'WORKSPACE' does not exist.</msg>
+<var>${workspace}</var>
+<arg>WORKSPACE</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="FAIL" start="2025-02-25T10:14:13.601952" elapsed="0.000450">Environment variable 'WORKSPACE' does not exist.</status>
+</kw>
 <kw name="Run Process" owner="Process">
-<msg time="2025-02-24T12:22:41.276626" level="INFO">Starting process:
-./CppRobo/hello_test</msg>
-<msg time="2025-02-24T12:22:41.283074" level="FAIL">FileNotFoundError: [Errno 2] No such file or directory: './CppRobo/hello_test'</msg>
 <var>${result}</var>
-<arg>./CppRobo/hello_test</arg>
+<arg>${workspace}/CppRobo/hello_test</arg>
 <doc>Runs a process and waits for it to complete.</doc>
-<status status="FAIL" start="2025-02-24T12:22:41.275726" elapsed="0.011960">FileNotFoundError: [Errno 2] No such file or directory: './CppRobo/hello_test'</status>
+<status status="NOT RUN" start="2025-02-25T10:14:13.602784" elapsed="0.000040"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
 <arg>${result.stdout}</arg>
 <arg>Hello, World!</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="NOT RUN" start="2025-02-24T12:22:41.288478" elapsed="0.000073"/>
+<status status="NOT RUN" start="2025-02-25T10:14:13.602998" elapsed="0.000036"/>
 </kw>
 <doc>Run the C++ Hello World program and verify output.</doc>
-<status status="FAIL" start="2025-02-24T12:22:41.274358" elapsed="0.014580">FileNotFoundError: [Errno 2] No such file or directory: './CppRobo/hello_test'</status>
+<status status="FAIL" start="2025-02-25T10:14:13.600870" elapsed="0.002410">Environment variable 'WORKSPACE' does not exist.</status>
 </test>
-<status status="FAIL" start="2025-02-24T12:22:41.229066" elapsed="0.060579"/>
+<status status="FAIL" start="2025-02-25T10:14:13.547212" elapsed="0.056732"/>
 </suite>
 <statistics>
 <total>
